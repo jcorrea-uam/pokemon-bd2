@@ -12,3 +12,4 @@ Instrucciones para incorporar su implementación:
 6. Ejecute 'node server.js' sobre el directorio de la aplicación.
 7. Abra con su navegador el archivo 'index.html' y compruebe el funcionamiento de la aplicación.
 
+Una vez haya completado su proyecto, reserve una cita en https://calendar.app.google/RWjM9fbBdVBENWdA8 
