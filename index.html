@@ -74,7 +74,7 @@
                             </div>
                         </form>
                     </div>
-                    <div id="pokemon-list" class="card-group p-2">
+                    <div id="pokemon-list" class="row row-cols-3 g-0">
 
                     </div>
                 </div>
@@ -177,7 +177,7 @@
     <script>
         (async () => {
             console.log('Loading list of pokemon');
-            const pokemon = await listPokemon();
+            const pokemon = await listPokemon(15);
             console.log(pokemon);
             showPokemonList(pokemon);
             document.addEventListener("click", async function (e) {

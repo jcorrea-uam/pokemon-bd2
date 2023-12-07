@@ -4,7 +4,8 @@ function showList(pokemon, container) {
         return;
     }
     const list = pokemon.map((p) => `
-        <div class="card" style="width: 12rem;">
+    <div class="col">
+        <div class="card h-100">
             <img data-pid="${p.id}" src="${p.thumbnail}" draggable="true" ondragstart="drag(event)" class="card-img-top rounded mx-auto d-block" style="width: 150px;" alt="${p.name}'s picture">
             <div class="card-body">
                 <h5 class="card-title">${p.name}</h5>
@@ -18,6 +19,7 @@ function showList(pokemon, container) {
                 <button class="btn btn-secondary evo-btn" data-pid="${p.id}">Evolutions</button>
             </div>
         </div>
+    </div>
     `);
     container.innerHTML = list.join("\n");
     // console.log(container.innerHTML);

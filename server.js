@@ -17,7 +17,7 @@ app.get('/api/pokemon/list', async (req, res) => {
         offset: 0
     };
     let params = Object.assign({}, defaults, req.query);
-    const list = await pokeCrud.listPokemon(params.limit, params.offset);
+    const list = await pokeCrud.listPokemon(parseInt(params.limit), parseInt(params.offset));
     res.json(list);
 });
 app.post('/api/pokemon/query', async (req, res) => {
@@ -30,7 +30,7 @@ app.post('/api/pokemon/query', async (req, res) => {
     };
     let params = Object.assign({}, defaults, req.query);
     const query = req.body.query;
-    const list = await pokeCrud.queryPokemon(query, params.limit, params.offset);
+    const list = await pokeCrud.queryPokemon(query, parseInt(params.limit), parseInt(params.offset));
     console.log('Responding with: ');
     console.log(list);
     res.json(list);
@@ -68,7 +68,7 @@ app.post('/api/pokemon/query-battle', async (req, res) => {
         offset: 0
     };
     let params = Object.assign({}, defaults, req.query);
-    const list = await battleCrud.queryBattles(req.body.query, params.limit, params.offset);
+    const list = await battleCrud.queryBattles(req.body.query, parseInt(params.limit), parseInt(params.offset));
     res.json(list);
 });
 
