@@ -74,7 +74,7 @@
                             </div>
                         </form>
                     </div>
-                    <div id="pokemon-list" class="row row-cols-3 g-0">
+                    <div id="pokemon-list" class="row row-cols-3 g-0" style="max-height: 700px; overflow-y: scroll;">
 
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <h5><strong>Player B: </strong><input id="playerA" size="10" /></h5>
+                        <h5><strong>Player B: </strong><input id="playerB" size="10" /></h5>
                         <div class="card">
                             <h5 class="card-header">Pokemon 1</h5>
                             <div id="teamB1-sel" class="teamB" data-team="teamB" data-pok="1" ondrop="drop(event)" ondragover="allowDrop(event)">
@@ -216,8 +216,8 @@
                     alert("Faltan pokemon por seleccionar");
                     return;
                 }
-                const playerA = document.getElementsByName('playerA').value;
-                const playerB = document.getElementsByName('playerA').value;
+                const playerA = document.getElementById('playerA').value;
+                const playerB = document.getElementById('playerA').value;
                 if (!playerA || !playerB) {
                     alert("Faltan nombres de jugadores");
                     return;
